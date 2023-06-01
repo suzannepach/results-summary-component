@@ -23,30 +23,57 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
 <body>
-
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
+  <main class="bg-white">
+    <div id="result-area bg-dark">
+      <h2 class="text-white-transparent fs-600">Your Result</h2>
+      <div class="circle bg-extra-dark border-radius-large">
+        <p class="text-white-transparent fs-500"><span class="text-white fs-800">76</span>
+          of 100</p>
+      </div>
+      <h3 class="text-white fs-700">Great</h3>
+      <p class="text-white-transparent fs-500">You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+    <div id="summary-area bg-white">
+      <h2 class="text-dark fs-600">Summary</h2>
+      <div id="summary">
+        <div id="reaction" class="border-radius-small summary-topic bg-accent1">
+          <picture id="image-reaction" aria-hidden="true">
+            <source srcset="assets/images/icon-reaction.svg" type="image/svg">
+            <img src="assets/images/icon-reaction.svg" alt="icon reaction">
+          </picture>
+          <h3 class="fs-500 text-accent1">Reaction</h3>
+          <p class="fs-500 text-dark-transparent"><span class="text-dark">80</span> / 100</p>
+        </div>
+        <div id="memory" class="border-radius-small summary-topic bg-accent2">
+          <picture id="image-memory" aria-hidden="true">
+            <source srcset="assets/images/icon-memory.svg" type="image/svg">
+            <img src="assets/images/icon-memory.svg" alt="icon memory">
+          </picture>
+          <h3 class="fs-500 text-accent2">Memory</h3>
+          <p class="fs-500 text-dark-transparent"><span class="text-dark">92</span> / 100</p>
+        </div>
+        <div id="verbal" class="border-radius-small summary-topic bg-accent3">
+          <picture id="image-verbal" aria-hidden="true">
+            <source srcset="assets/images/icon-verbal.svg" type="image/svg">
+            <img src="assets/images/icon-verbal.svg" alt="icon verbal">
+          </picture>
+          <h3 class="fs-500 text-accent3">Verbal</h3>
+          <p class="fs-500 text-dark-transparent"><span class="text-dark">61</span> / 100</p>
+        </div>
+        <div id="visual" class="border-radius-small summary-topic bg-accent4">
+          <picture id="image-visual" aria-hidden="true">
+            <source srcset="assets/images/icon-visual.svg" type="image/svg">
+            <img src="assets/images/icon-visual.svg" alt="icon visual">
+          </picture>
+          <h3 class="fs-500 text-accent4">Visual</h3>
+          <p class="fs-500 text-dark-transparent"><span class="text-dark">72</span> / 100</p>
+        </div>
+      </div>
+      <button class="border-radius-medium bg-extra-dark text-white">Continue</button>
+    </div>  
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
