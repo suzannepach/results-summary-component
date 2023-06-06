@@ -25,53 +25,61 @@
 </head>
 
 <body>
-  <main class="bg-white">
-    <div id="result-area bg-dark">
+  <main class="grid-container">
+    <div id="result-area" class="bg-dark flex">
       <h2 class="text-white-transparent fs-600">Your Result</h2>
-      <div class="circle bg-extra-dark border-radius-large">
+      <div class="circle bg-extra-dark">
         <p class="text-white-transparent fs-500"><span class="text-white fs-800">76</span>
           of 100</p>
       </div>
       <h3 class="text-white fs-700">Great</h3>
       <p class="text-white-transparent fs-500">You scored higher than 65% of the people who have taken these tests.</p>
     </div>
-    <div id="summary-area bg-white">
+    <div id="summary-area" class="flex bg-white">
       <h2 class="text-dark fs-600">Summary</h2>
-      <div id="summary">
-        <div id="reaction" class="border-radius-small summary-topic bg-accent1">
-          <picture id="image-reaction" aria-hidden="true">
-            <source srcset="assets/images/icon-reaction.svg" type="image/svg">
-            <img src="assets/images/icon-reaction.svg" alt="icon reaction">
-          </picture>
-          <h3 class="fs-500 text-accent1">Reaction</h3>
-          <p class="fs-500 text-dark-transparent"><span class="text-dark">80</span> / 100</p>
+      <div id="summary" class="flex">
+        <div id="reaction" class="summary-topic bg-accent1">
+          <div class="flex">
+            <picture id="image-reaction" aria-hidden="true">
+              <source srcset="assets/images/icon-reaction.svg" type="image/svg">
+              <img src="assets/images/icon-reaction.svg" alt="icon reaction">
+            </picture>
+            <h3 class="fs-500 text-accent1">Reaction</h3>
+          </div>
+          <p class="fs-500 text-extra-dark-transparent"><span class="text-dark">80</span> / 100</p>
         </div>
-        <div id="memory" class="border-radius-small summary-topic bg-accent2">
-          <picture id="image-memory" aria-hidden="true">
-            <source srcset="assets/images/icon-memory.svg" type="image/svg">
-            <img src="assets/images/icon-memory.svg" alt="icon memory">
-          </picture>
-          <h3 class="fs-500 text-accent2">Memory</h3>
-          <p class="fs-500 text-dark-transparent"><span class="text-dark">92</span> / 100</p>
+        <div id="memory" class="summary-topic bg-accent2">
+          <div class="flex">
+            <picture id="image-memory" aria-hidden="true">
+              <source srcset="assets/images/icon-memory.svg" type="image/svg">
+              <img src="assets/images/icon-memory.svg" alt="icon memory">
+            </picture>
+            <h3 class="fs-500 text-accent2">Memory</h3>
+          </div>
+          <p class="fs-500 text-extra-dark-transparent"><span class="text-dark">92</span> / 100</p>
         </div>
-        <div id="verbal" class="border-radius-small summary-topic bg-accent3">
-          <picture id="image-verbal" aria-hidden="true">
-            <source srcset="assets/images/icon-verbal.svg" type="image/svg">
-            <img src="assets/images/icon-verbal.svg" alt="icon verbal">
-          </picture>
-          <h3 class="fs-500 text-accent3">Verbal</h3>
-          <p class="fs-500 text-dark-transparent"><span class="text-dark">61</span> / 100</p>
+        <div id="verbal" class="summary-topic bg-accent3">
+          <div class="flex">
+            <picture id="image-verbal" aria-hidden="true">
+              <source srcset="assets/images/icon-verbal.svg" type="image/svg">
+              <img src="assets/images/icon-verbal.svg" alt="icon verbal">
+            </picture>
+            <h3 class="fs-500 text-accent3">Verbal</h3>
+          </div>
+          <p class="fs-500 text-extra-dark-transparent"><span class="text-dark">61</span> / 100</p>
         </div>
-        <div id="visual" class="border-radius-small summary-topic bg-accent4">
-          <picture id="image-visual" aria-hidden="true">
-            <source srcset="assets/images/icon-visual.svg" type="image/svg">
-            <img src="assets/images/icon-visual.svg" alt="icon visual">
-          </picture>
-          <h3 class="fs-500 text-accent4">Visual</h3>
-          <p class="fs-500 text-dark-transparent"><span class="text-dark">72</span> / 100</p>
+        <div id="visual" class="summary-topic bg-accent4">
+          <div class="flex">
+            <picture id="image-visual" aria-hidden="true">
+              <source srcset="assets/images/icon-visual.svg" type="image/svg">
+              <img src="assets/images/icon-visual.svg" alt="icon visual">
+            </picture>
+            <h3 class="fs-500 text-accent4">Visual</h3>
+          </div>
+          <p class="fs-500 text-extra-dark-transparent"><span class="text-dark">72</span> / 100</p>
         </div>
       </div>
-      <button class="border-radius-medium bg-extra-dark text-white">Continue</button>
+      <button class="button bg-extra-dark text-white">Continue</button>
     </div>  
   </main>
   
