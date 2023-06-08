@@ -31,7 +31,7 @@
     --radius-large: 50%; */
 }
 
-@media (min-width: 45em) {
+@media (min-width: 28em) {
     :root {
         /* font-sizes */
         --fs-800: 4.25rem;
@@ -187,6 +187,12 @@ select {
     display: block;
 }
 
+@media (min-width: 64em) {
+    .circle {
+        width: 55%;
+    }
+}
+
 /* Summary topic */
 
 .summary-topic {
@@ -220,6 +226,8 @@ select {
 }
 
 #result-area,
+#result,
+#compliment,
 #summary-area,
 #summary {
     flex-direction: column;
@@ -231,9 +239,10 @@ select {
     grid-area: result-area;
     border-radius: 0 0 1.875rem 1.875rem;
     padding: 1.625rem 0 2.625rem 0;
+    justify-content: space-around;
 }
 
-.grid-container #result-area > p {
+.grid-container #result-area > div > p {
     width: 70%;
 }
 
@@ -264,21 +273,19 @@ select {
     }
 }
 
-/* @media (min-width: 64em) {
-    main {
-        width: 64rem;
-    }
-
-    .grid-container {
+@media (min-width: 64em) {
+    main.grid-container {
+        width: 47rem;
         grid-template-areas: 
-            'result-area summary-area';
+        'result-area summary-area';
+        grid-template-columns: repeat(2, 50%);
     }
 
     .grid-container #result-area,
-    .grid-container #result-area {
+    .grid-container #summary-area {
         height: 100%;
-        width: 50%;
+        width: 100%;
     }
-} */
+}
 
 
