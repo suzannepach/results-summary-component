@@ -209,7 +209,16 @@ select {
     border-radius: 1.875rem;
     width: 100%;
     padding: 1.375rem;
+    font-size: var(--fs-600);
+    border: none;
 }
+
+.button:hover,
+.button:focus {
+    background-color: hsl( var(--clr-dark) );
+    border: none;
+}
+
 
 
 /* ----------------------------- */
@@ -238,11 +247,21 @@ select {
 .grid-container #result-area {
     grid-area: result-area;
     border-radius: 0 0 1.875rem 1.875rem;
-    padding: 1.625rem 0 2.625rem 0;
-    justify-content: space-around;
+    padding: 1.875rem 0;
+    /* justify-content: space-between; */
+    --gap: 3rem;
 }
 
-.grid-container #result-area > div > p {
+/* #result {
+    --gap: 3rem;
+} */
+
+#result,
+#compliment {
+    --gap: 1rem;
+}
+
+.compliment-text {
     width: 70%;
 }
 
@@ -289,3 +308,14 @@ select {
 }
 
 
+/* 
+Nog doen:
+* continue button: bigger text and hover effect
+
+* desktop: line up text result and summary
+
+* use json file to get data
+* attribution
+* read me file 
+* post on frontendmentor
+*/
