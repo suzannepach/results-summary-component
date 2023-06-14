@@ -225,7 +225,12 @@ select {
 /* Layout                        */
 /* ----------------------------- */
 
-.grid-container {
+body {
+    display: grid;
+    grid-template-rows: auto 2rem;
+}
+
+main > .grid-container {
     display: grid;
     text-align: center;
     place-items: center;
@@ -244,17 +249,12 @@ select {
     align-items: center;
 }
 
-.grid-container #result-area {
+main > .grid-container #result-area {
     grid-area: result-area;
     border-radius: 0 0 1.875rem 1.875rem;
     padding: 1.875rem 0;
-    /* justify-content: space-between; */
     --gap: 3rem;
 }
-
-/* #result {
-    --gap: 3rem;
-} */
 
 #result,
 #compliment {
@@ -265,7 +265,7 @@ select {
     width: 70%;
 }
 
-.grid-container #summary-area {
+main > .grid-container #summary-area {
     grid-area: summary-area;
     padding: 1.875rem;
     --gap: 1.5rem;
@@ -274,48 +274,56 @@ select {
 @media (min-width: 28em) {
     body {
         background-color: #F5F5F5;
+    }
+    
+    main {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    main {
+    main > .grid-container {
         background-color: hsl( var(--clr-white) );
         width: 28rem;
         box-shadow: 0.625rem 2.5rem 3.75rem hsl( var(--clr-accent4-dark) / 0.1);
     }
 
-    main, 
-    .grid-container #summary-area,
-    .grid-container #result-area {
+    main > .grid-container, 
+    main > .grid-container #summary-area,
+    main > .grid-container #result-area {
         border-radius: 1.875rem;
     }
 }
 
 @media (min-width: 64em) {
-    main.grid-container {
+    main > .grid-container {
         width: 47rem;
         grid-template-areas: 
         'result-area summary-area';
         grid-template-columns: repeat(2, 50%);
     }
 
-    .grid-container #result-area,
-    .grid-container #summary-area {
+    main > .grid-container #result-area,
+    main > .grid-container #summary-area {
         height: 100%;
         width: 100%;
     }
 }
 
 
+/* Attribution*/
+.attribution { font-size: 1rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
 /* 
 Nog doen:
-* continue button: bigger text and hover effect
-
-* desktop: line up text result and summary
 
 * use json file to get data
-* attribution
+
 * read me file 
 * post on frontendmentor
+
+* attribution space site
+* read me space site
 */
