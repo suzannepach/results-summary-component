@@ -319,7 +319,10 @@ main > .grid-container #summary-area {
 /* 
 Nog doen:
 
-* use json file to get data
+* why does fetch() not need to use parse() to get the json data? (see js file)
+* refactor js file to use less code (see scrimba front en path project for inspiration), maybe 
+change divs in html into list items
+https://scrimba.com/learn/frontend/use-the-chrome-api-to-get-the-tab-cof4d4a9b8e6dea505a0b1679
 
 * read me file 
 * post on frontendmentor
