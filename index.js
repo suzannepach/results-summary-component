@@ -18,8 +18,13 @@ fetch('https://raw.githubusercontent.com/suzannepach/results-summary-component/m
     .then((json) => { 
         let listItems = "";
         let totalScore = 0;
+        let incomplete = false;
 
         json.forEach((element,index) => {
+            // If some tasks have no score, the user will be asked to finish the tasks
+            if(element.score===0) {
+                incomplete = true;
+            }
             listItems += `
             <li id="${element.id}" class="summary-topic bg-accent${index+1}">
                 <div class="flex">
@@ -38,7 +43,10 @@ fetch('https://raw.githubusercontent.com/suzannepach/results-summary-component/m
         let average = Math.floor(totalScore / 4);
         averageScore.textContent = average;
 
-        if (average > 75) {
+        if (incomplete) {
+            complimentHeader.textContent = "Incomplete"
+            complimentMsg.textContent = "Please finish all the tasks."
+        } else if (average > 75) {
             complimentHeader.textContent = "Great"
             complimentMsg.textContent = "You scored higher than 65% of the people who have taken these tests."
         } else if (average > 50) {
