@@ -14,13 +14,13 @@
   {
     "id": "verbal",
     "category": "Verbal",
-    "score": ,
+    "score": 0,
     "icon": "./assets/images/icon-verbal.svg"
   },
   {
     "id": "visual",
     "category": "Visual",
-    "score": ,
+    "score": 0,
     "icon": "./assets/images/icon-visual.svg"
   }
 ]
