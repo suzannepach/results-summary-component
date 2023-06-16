@@ -9,25 +9,31 @@ const complimentMsg = document.getElementById("compliment-msg");
 // That is why I fetch the JSON file from my gh-pages even when working local. I have to use the raw
 // file, not the normal gh file.
 // I don't really understand why I don't need to use parse() to get the json content.
+// I made the code a lot shorter by changing the summary div in the html into an unordered
+// list. In JS I added the list items using a loop (just like we learned in 
+// https://scrimba.com/learn/frontend/use-the-chrome-api-to-get-the-tab-cof4d4a9b8e6dea505a0b1679 )
+
 fetch('https://raw.githubusercontent.com/suzannepach/results-summary-component/main/data.json')
     .then((response) => response.json())
     .then((json) => { 
         let listItems = "";
         let totalScore = 0;
-        for (let i = 0; i < 4; i++) {
+
+        json.forEach((element,index) => {
             listItems += `
-            <li id="${json[i].id}" class="summary-topic bg-accent${i+1}">
+            <li id="${element.id}" class="summary-topic bg-accent${index+1}">
                 <div class="flex">
                     <picture aria-hidden="true">
-                        <source srcset=${json[i].icon} type="image/svg">
-                        <img src=${json[i].icon} alt="icon ${json[i].id}">
+                        <source srcset=${element.icon} type="image/svg">
+                        <img src=${element.icon} alt="icon ${element.id}">
                     </picture>
-                    <h3 class="fs-500 text-accent${i+1}">${json[i].category}</h3>
+                    <h3 class="fs-500 text-accent${index+1}">${element.category}</h3>
                 </div>
-                <p class="fs-500 text-extra-dark-transparent"><span class="text-dark">${json[i].score}</span> / 100</p>
+                <p class="fs-500 text-extra-dark-transparent"><span class="text-dark">${element.score}</span> / 100</p>
             </li>`
-            totalScore += json[i].score;
-        }
+            totalScore += element.score;
+        });
+
         summary.innerHTML = listItems;
         let average = Math.floor(totalScore / 4);
         averageScore.textContent = average;
