@@ -1,3 +1,7 @@
+const averageScore = document.getElementById("average-score");
+const complimentHeader = document.getElementById("compliment-header");
+const complimentMsg = document.getElementById("compliment-msg");
+
 const reactionCat = document.getElementById("reaction-cat");
 const reactionScore = document.getElementById("reaction-score");
 const reactionImg = document.getElementById("image-reaction");
@@ -51,6 +55,22 @@ fetch('https://raw.githubusercontent.com/suzannepach/results-summary-component/m
         visualImg.innerHTML = 
         `<source srcset=${json[3].icon} type="image/svg">
         <img src=${json[3].icon} alt="icon reaction">`
+
+        let totalScore = json[0].score + json[1].score + json[2].score + json[3].score;
+        let average = Math.floor(totalScore / 4);
+        averageScore.textContent = average;
+
+        if (average > 75) {
+            complimentHeader.textContent = "Great"
+            complimentMsg.textContent = "You scored higher than 65% of the people who have taken these tests."
+        } else if (average > 50) {
+            complimentHeader.textContent = "Not bad"
+            complimentMsg.textContent = "Can you try again to score even higher?"
+        } else {
+            complimentHeader.textContent = "Well tried"
+            complimentMsg.textContent = "Keep practicing to improve your score!"
+        }
+
     });
 
 
