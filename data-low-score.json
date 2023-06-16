@@ -1,0 +1,26 @@
+[
+  {
+    "id": "reaction",
+    "category": "Reaction",
+    "score": 80,
+    "icon": "./assets/images/icon-reaction.svg"
+  },
+  {
+    "id": "memory",
+    "category": "Memory",
+    "score": 92,
+    "icon": "./assets/images/icon-memory.svg"
+  },
+  {
+    "id": "verbal",
+    "category": "Verbal",
+    "score": 61,
+    "icon": "./assets/images/icon-verbal.svg"
+  },
+  {
+    "id": "visual",
+    "category": "Visual",
+    "score": 72,
+    "icon": "./assets/images/icon-visual.svg"
+  }
+]
